@@ -1,0 +1,3 @@
+C:/Users/afras/utcn/anul2/sem1/af/teme_lab/utcn-fa/lab00/cmake-build-debug/CMakeFiles/main.dir
+C:/Users/afras/utcn/anul2/sem1/af/teme_lab/utcn-fa/lab00/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/afras/utcn/anul2/sem1/af/teme_lab/utcn-fa/lab00/cmake-build-debug/CMakeFiles/rebuild_cache.dir

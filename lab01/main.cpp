@@ -48,5 +48,8 @@ int main()
         {"perf", perf, "[avg(default)|best|worst] - run performance analysis on selected case"},
         {"bench", bench, "[avg(default)|best|worst] - run benchmarks on selected case"},
     };
+
     return runCommandLoop(commands);
+
+    // demonstrate(10);
 }
