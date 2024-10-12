@@ -4,7 +4,37 @@
 
 #include <iostream>
 
-// TODO: Comentariu analiza algoritmi
+/* Analiza algoritmi
+ * Bubble Sort:
+ *      total operatii: ~2n^2
+ *      complexitate: O(n^2) average & worst case
+ *                    O(n) best case (depinde de implementare)
+ *      ! cel mai costisitor de rulat in majoritatea cazurilor.
+ *      ! cel mai incet din punct de vedere al timpului
+ *      ! cel mai simplu din pct de vedere al implementarii (comparativ cu Insertion Sort)
+ *
+ * Insertion Sort:
+ *      total operatii: nlogn
+ *      complexitate: O(n^2) average & worst case
+ *                    O(nlogn) best case
+ *      ! dupa Bubble Sort, cel mai greu de rulat algoritm de sortare
+ *      ! mai apropiat de timpul de executie si numarul de operatii al Bubble Sort decat cel al Selection Sort
+ *      contrar faptului ca implementarea este foarte asemanatoare cu cea a Selection Sort-ului
+ *
+ * Binary Insertion Sort:
+ *      total operatii: 2logn ??
+ *      complexitate: O(n^2) average & worst
+ *                    O(nlogn) best
+ *      ! prin simpla aditie a cautarii binare algoritmul Insertion SOrt devine mult mai rapid, eficient
+ *      ! foarte asemanator ca timp de executie si operatii cu Selection Sort
+ * Selection Sort:
+ *      total operatii: nlogn
+ *      complexitate: O(n^2) average & worst
+ *                    O(nlogn) best
+ *      ! asemanator cu Binary Insertion Sort ca timp si operatii
+ *      ! Selection Sort castiga la ATRIBUIRI
+ *      ! Binary Insertion Sort castiga la COMPARATII
+*/
 
 namespace lab01 {
     void FillSortedArray(int *values, int n) {
@@ -292,8 +322,6 @@ namespace lab01 {
         profiler.addSeries("total_bin_insert", "asg_binary_insertion_sort", "cmp_binary_insertion_sort");
 
         profiler.createGroup("total_ops", "total_bubble", "total_selection", "total_insertion", "total_bin_insert");
-
-        profiler.showReport();
 
         profiler.reset("asg_bubble_sort");
         profiler.reset("cmp_bubble_sort");
