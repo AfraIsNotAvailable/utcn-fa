@@ -4,6 +4,8 @@
 #include "Profiler.h"
 #include "commandline.h"
 
+using namespace std;
+
 namespace lab03
 {
 
@@ -11,11 +13,10 @@ namespace lab03
 	 * @brief Quick sort algorithm
 	 *
 	 * @param values array of input values to be sorted
-	 * @param n number of values in the input array
 	 * @param opAsg optional counter for assignment operations
 	 * @param opCmp optional counter for comparison operations
 	 */
-	void quickSort(int* values, int n, Operation* opAsg = nullptr, Operation* opCmp = nullptr);
+	void quickSort(int *values, int low, int high, Operation* opAsg = nullptr, Operation* opCmp = nullptr);
 
 	/**
 	 * @brief Hybridized Quick sort algorithm
@@ -31,11 +32,13 @@ namespace lab03
 	 * @brief Quick select algorithm
 	 *
 	 * @param values array of input values to be sorted
-	 * @param n number of values in the input array
+	 * @param low
+	 * @param high
+	 * @param sel
 	 * @param opAsg optional counter for assignment operations
 	 * @param opCmp optional counter for comparison operations
 	 */
-		void quickSelect(int* values, int n, Operation* opAsg = nullptr, Operation* opCmp = nullptr);
+		void quickSelect(int* values, int low, int high, int sel, Operation* opAsg = nullptr, Operation* opCmp = nullptr);
 
 	/**
 	 * @brief Heap sort algorithm

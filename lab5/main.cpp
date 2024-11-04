@@ -1,4 +1,4 @@
-#include "quick_sort.h"
+#include "hashtables.h"
 
 #define CATCH_CONFIG_RUNNER
 #include "catch2.hpp"
@@ -9,14 +9,16 @@
 #include <cstdio>
 #include <string>
 
-using namespace lab03;
+using namespace lab5;
 
-Profiler profiler("quick_sort");
+Profiler profiler("hashtables");
 
 void demo(const CommandArgs& args)
 {
-    const int size = args.empty()? 10: atoi(args[0]);
-    demonstrate(size);
+    //TODO change default parameteres
+    const int n = args.empty()? 20: atoi(args[0]);
+    const int k = args.empty()? 4: atoi(args[1]);
+    demonstrate(n, k);
 }
 
 void test(const CommandArgs& args)
