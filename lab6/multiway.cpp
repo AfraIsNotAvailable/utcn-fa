@@ -9,6 +9,9 @@
 #include <stack>
 #include <unordered_map>
 
+/**
+ * Dpdv al operatiilor, atat implementarea iterativa cat si cea recursiva a traversarii arborelui binar sunt O(n).
+ */
 namespace lab6 {
     /** TODO: Implement three different  multiway tree representations
     * 1. Parent array representation: for each index, the value in the vector represents the parent's
@@ -317,17 +320,18 @@ namespace lab6 {
 
         const NodeR2 rootR2 = transformR1ToR2(rootR1);
 
-        // prettyPrintR2(rootR2, 0);
+        printf("Pretty Print R2\n");
+        prettyPrintR2(rootR2, 0);
 
         NodeR3 *rootR3 = new NodeR3(rootR2.key);
         rootR3 = transformR2toR3(rootR2);
 
-        // prettyPrintR3(rootR3);
+        printf("Pretty Print R3\n");
+        prettyPrintR3(rootR3);
 
-        deleteBinaryTree(rootR3);
         printf("\n\n");
 
-        NodeBin rootBin(5);
+        NodeBin rootBin(5); //
         addNode(&rootBin, 2);
         addNode(&rootBin, 3);
         addNode(&rootBin, 1);
@@ -336,7 +340,24 @@ namespace lab6 {
         addNode(&rootBin, 6);
         addNode(&rootBin, 7);
 
-        prettyPrintBinary(&rootBin);
+        // printf("Pretty Print Binary\n");
+        // prettyPrintBinary(&rootBin);
+
+        printf("Inorder Recursive\n");
+        inorderRecursive(&rootBin);
+        printf("\n");
+
+        printf("Preorder Iterative\n");
+        preorderIterative(&rootBin);
+        printf("\n");
+
+        printf("Preorder Recursive\n");
+        preorderRecursive(&rootBin);
+        printf("\n");
+
+        printf("Postorder Recursive\n");
+        postorderRecursive(&rootBin);
+        printf("\n");
 
         // preorderRecursive(&rootBin);
         // NodeR2 rootR2;
